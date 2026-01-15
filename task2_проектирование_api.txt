@@ -1,0 +1,71 @@
+Описание: Интернет-магазин "Петрушка Зеленая" преуспевает, расширяется и в мобильном приложении решили создать новый экран, который будет отображать магазины партнеров (см. макеты ниже).
+
+
+
+
+
+Написать пример REST API запроса, который будет вызываться при переходе пользователя на данный экран. 
+                         Method: GET
+                         URL: /api/v1/partner-stores
+
+
+Привести пример ответа этого REST API в соответствии с макетом. Формат - JSON. Учесть, что при клике на плашку магазина должен осуществляться переход по ссылке на внешний ресурс. 
+{    "partner-stores": [
+      {
+        "id": "1",
+        "partnerName": "METRO",
+        "partnerUrl": "http://metro.ru/",
+        "logoUrl": "http://petrushkazelenaya.ru/partners/metro_logo.png",
+        "deliveryInfo": {
+          "type": "scheduled",
+          "scheduled": {
+            "date": "2025-01-01",
+            "timeSlot": "21:00-23:00"
+          },
+          "express":  null,
+        },
+      },
+      {
+        "id": "2",
+        "partnerName": "Ашан",
+        "partnerUrl": "http://auchan.ru/",
+        "logoUrl": "http://petrushkazelenaya.ru/partners/auchan_logo.png",
+        "deliveryInfo": {
+          "type": "scheduled",
+          "scheduled": {
+            "date": "2025-01-01",
+            "timeSlot": "18:00-20:00"
+          },
+          "express":  null,
+        },
+      },
+      {
+        "id": "3",
+        "partnerName": "ВкусВилл",
+        "partnerUrl": "http://vkusvill.ru/",
+        "logoUrl": "http://petrushkazelenaya.ru/partners/vkusvill_logo.png",
+        "deliveryInfo": {
+          "type": "express",
+          "scheduled": null,
+          "express": {
+            "timeFrom": "20",
+            "timeUntil": "60",
+          },
+        },
+      },
+      {
+        "id": "4",
+        "partnerName": "ВИКТОРИЯ",
+        "partnerUrl": "http://victoria.ru/",
+        "logoUrl": "http://petrushkazelenaya.ru/partners/victoria_logo.png",
+        "deliveryInfo": {
+          "type": "scheduled",
+          "scheduled": {
+            "date": "2025-01-01",
+            "timeSlot": "17:00-19:00"
+          },
+          "express": null,
+        }
+      }
+   ]
+}
